@@ -69,7 +69,7 @@
         removed.appendChild(taskItem);
         changeButtonName(taskItem.querySelector('.delete-btn'),'Remove parmanently');        
         } else if(taskItem.parentElement.id === 'removed') {
-          taskItem.remove();
+          taskItem.removed();
         }
       }
    });
