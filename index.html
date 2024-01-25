@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
   <title>ToDo List</title>
+  <style>
+    .strike:checked+label{
+      text-decoration:line-through ;
+    }
+  </style>
 </head>
 <body>
 ​
@@ -15,10 +20,7 @@
       <li class="list-group-item d-flex justify-content-between align-items-center">
         <div class="form-check">
           <input class="form-check-input" type="checkbox" id="task1">
-          <label class="form-check-label" for="task1">Checkbox Task</label>
-          input[type=checkbox]:checked+label.strikethrough{
-            text-decoration:line-through;
-          }
+          <label class="form-check-label strike" for="task1">Checkbox Task</label>
         </div>
         <button class="btn btn-danger btn-sm delete-btn">Remove</button>
       </li>
