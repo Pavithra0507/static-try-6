@@ -44,8 +44,8 @@
   <script>
     document.getElementById('addTaskBtn').addEventListener('click', function() {
       var taskInput = document.getElementById('newTaskInput').value;
-      var currentDateAndTime = new Date();
-      var formattedDateAndTime = currentDateAndTime.toLocaleString();
+      var currentdt = new Date();
+      var formatteddt = currentdt.toLocaleString();
       if (taskInput.trim() !== '') {
         var todoList = document.getElementById('todoList');
         var newTask = document.createElement('li');
@@ -53,7 +53,7 @@
         newTask.innerHTML = `
           <div class="form-check">
             <input class="form-check-input strike" type="checkbox">
-            <label class="form-check-label strike">${taskInput}&ensp;${formattedDateAndTime}</label>
+            <label class="form-check-label strike">${taskInput}&ensp;${formatteddt}</label>
           </div>
           <button class="btn btn-danger btn-sm delete-btn">Remove</button>
         `;
